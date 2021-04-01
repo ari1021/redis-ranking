@@ -1,0 +1,16 @@
+version: "3"
+services:
+  docker-redis:
+    image: redis:6.0
+    container_name: redis
+    volumes:
+      - ./redis/data:/data
+      # ローカルの./redis/dataをコンテナ上の/data(Redisのデータ)にマウントする
+      - ./redis/log:/usr/local/var/log
+      # ローカルの./redis/logをコンテナ上のusr/local/var/log(Redisのログ，redis.confで指定)にマウントする
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      # ローカルの./redis/redis.cnf(Redisの設定ファイル)をコンテナ上の/usr/local/etc/redis/redis.confにマウントする
+    ports:
+      - "6379:6379"
+      # ローカルの6379ポートとコンテナの6379ポートをマッピングする
+    entrypoint: redis-server /usr/local/etc/redis/redis.conf
