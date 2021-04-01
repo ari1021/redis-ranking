@@ -17,3 +17,7 @@
 # Redis
 redis/data
 redis/log
+
+# MySQL
+mysql/data
+mysql/log
