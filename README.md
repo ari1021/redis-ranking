@@ -67,9 +67,15 @@ go test -bench=. ./src/mysql -benchmem
 CPU が 1.8GHz Intel Core i5，メモリが 8GB の計算機上で行なった結果が以下の通りです．
 
 ランキング上位100件のデータを取得しています．
+
+左側から，
+```
+実行したベンチマーク名 / 実行した回数 / 1回あたりの実行時間(ns/op) / 1回あたりの確保容量(B/op) / 1回あたりのアロケーション回数(allocs/op) 
+```
+となっています．
+
 - データ数が1000の場合
 ```
-                          実行した回数             実行時間	   確保した容量	   アロケーション回数
 # Redis
 BenchmarkGetRankings-4   	     328	   3576331 ns/op	   41288 B/op	     908 allocs/op
 
@@ -79,7 +85,6 @@ BenchmarkGetRankings-4   	      63	  18586058 ns/op	  392967 B/op	   18051 alloc
 
 - データ数が5000の場合
 ```
-                          実行した回数             実行時間	   確保した容量	   アロケーション回数
 # Redis
 BenchmarkGetRankings-4   	     348	   3679865 ns/op	   41952 B/op	     908 allocs/op
 
@@ -87,11 +92,8 @@ BenchmarkGetRankings-4   	     348	   3679865 ns/op	   41952 B/op	     908 alloc
 BenchmarkGetRankings-4   	      20	  58493116 ns/op	 2169418 B/op	   90068 allocs/op
 ```
 
-
-
 - データ数が10000の場合
 ```
-                          実行した回数             実行時間	   確保した容量	   アロケーション回数
 # Redis
 BenchmarkGetRankings-4   	     301	   3582936 ns/op	   42096 B/op	     908 allocs/op
 
