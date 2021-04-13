@@ -24,6 +24,8 @@ services:
       # ローカルの./mysql/logをコンテナ上の/var/log/mysql(MySQLのログ)にマウントする
       - ./mysql/my.cnf:/etc/mysql/conf.d/my.cnf
       # ローカルの./mysql/my.cnf(MySQLの設定ファイル)をコンテナ上の/etc/mysql/conf.d/my.cnfにマウントする
+      - ./mysql/init:/docker-entrypoint-initdb.d
+      # ローカルの./mysql/init(MySQLの初期データファイル)をコンテナ上の/docker-entrypoint-initdb.dにマウントする
     ports:
       - "3306:3306"
       # ローカルの3306ポートとコンテナの3306ポートをマッピングする
