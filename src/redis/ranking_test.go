@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ari1021/redis-ranking/src/db"
-	"github.com/ari1021/redis-ranking/src/redis"
+	"github.com/arkuchy/redis-ranking/src/db"
+	"github.com/arkuchy/redis-ranking/src/redis"
 )
 
 const limit int = 100

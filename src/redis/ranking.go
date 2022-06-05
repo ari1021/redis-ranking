@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/ari1021/redis-ranking/src/db"
+	"github.com/arkuchy/redis-ranking/src/db"
 	goRedis "github.com/go-redis/redis/v8"
 )
 

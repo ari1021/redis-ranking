@@ -10,9 +10,9 @@ import (
 
 	goRedis "github.com/go-redis/redis/v8"
 
-	"github.com/ari1021/redis-ranking/src/db"
-	"github.com/ari1021/redis-ranking/src/mysql"
-	"github.com/ari1021/redis-ranking/src/redis"
+	"github.com/arkuchy/redis-ranking/src/db"
+	"github.com/arkuchy/redis-ranking/src/mysql"
+	"github.com/arkuchy/redis-ranking/src/redis"
 )
 
 type User struct {

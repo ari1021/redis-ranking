@@ -3,7 +3,7 @@ package mysql
 import (
 	"context"
 
-	"github.com/ari1021/redis-ranking/src/db"
+	"github.com/arkuchy/redis-ranking/src/db"
 )
 
 type UserResponse struct {

@@ -1,4 +1,4 @@
-module github.com/ari1021/redis-ranking
+module github.com/arkuchy/redis-ranking
 
 go 1.15
 
